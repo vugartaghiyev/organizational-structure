@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="nav__left"></div>
+        <div class="nav__right">
+            <button onclick = "GoToCenter()">
+                <img src="./paper-plane.png" alt="Go To Center">
+            </button>
+            <button class="zoom-out" onmousedown="zoomOut()" onmouseup="stopZooming()" onmouseout="stopZooming()">
+                <img src="./minus (1).png" alt="">
+            </button>
+            <button class="zoom-100" onmousedown="standartZoom()">100%</button>
+            <button class="zoom-in" onmousedown="zoomIn()" onmouseup="stopZooming()" onmouseout="stopZooming()">
+                <img src="./add (1).png" alt="">
+            </button>
+        </div>
+    </nav>
+
+    <hr>
+
+    <button class = "bottom-side side-button" onmousedown="StartBottom()" onmouseup="OnMouseUp()" onmouseout="OnMouseUp()"><img src="./right-arrow.png" alt=""></button>
+    <button class = "top-side side-button" onmousedown="StartTop()" onmouseup="OnMouseUp()" onmouseout="OnMouseUp()"><img src="./right-arrow.png" alt=""></button>
+    <button class = "left-side side-button" onmousedown="StartLeft()" onmouseup="OnMouseUp()" onmouseout="OnMouseUp()"><img src="./right-arrow.png" alt=""></button>
+    <button class = "right-side side-button" onmousedown="StartRight()" onmouseup="OnMouseUp()" onmouseout="OnMouseUp()"><img src="./right-arrow.png" alt=""></button>
+
+
+    <div class="container">
+        <div class="content">
+
+            <div class="categries">
+                <input type="text" class="first-box" value = "Categories"  onkeypress="this.style.width = ((this.value.length + 1) * 15) + 'px';"> 
+                <div>
+                    <div class="mini-icon add-button" onclick = "Adding(this)">
+                        <img class = "mini-icon" src="./add.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="children">
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src = "script.js"></script>
+    <script src = "adding.js"></script>
+</body>
+</html>
+
+
+<!-- <div class="content__1 content__item">  
+    <div class="content__item--parent">          
+        <input type="text" class="input-box first-box" value = "Categories"  onkeypress="this.style.width = ((this.value.length + 1) * 15) + 'px';">
+        
+        <div class="adition-icons">
+            <div class="mini-icon add-button" onclick = "Adding(this)">
+                <img src="./add.png" alt="">
+            </div>
+            <div class="mini-icon write-button">
+                <img src="./pen.png" alt="">
+            </div>                        
+            <div class="mini-icon remove-button">
+                <img src="./close-cross.png" alt="">
+            </div>
+        </div>
+
+        <div class="other-icons">
+            <div class="mini-icon cancel-button">
+                <img src="./close-cross.png" alt="">
+            </div>                        
+            <div class="mini-icon done-button" onclick = "Done(this)">
+                <img src="./done-tick.png" alt="">
+            </div>
+        </div>
+
+    </div>
+    <div class="children">
+
+    </div>
+</div> -->
